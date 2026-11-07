@@ -1,0 +1,1 @@
+{"frame": 0, "time_s": 0.0, "count": 3, "detections": [{"xyxy": [103.31, 147.54, 120.21, 195.05], "confidence": 0.0916, "prompt": "deer"}, {"xyxy": [161.89, 164.13, 171.96, 198.45], "confidence": 0.0816, "prompt": "deer"}, {"xyxy": [56.48, 76.61, 65.83, 108.24], "confidence": 0.0618, "prompt": "deer"}]}

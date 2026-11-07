@@ -1,0 +1,11 @@
+{
+  "completed_or_existing": 6,
+  "planned_files": 6,
+  "errors": [
+    {
+      "source": "Delplanque_African_Mammals",
+      "error": "Metadata HTTP request failed (28): curl: (28) Failed to connect to dataverse.uliege.be port 443 after 20002 ms: Timeout was reached\ncurl: (28) Failed to connect to dataverse.uliege.be port 443 after 20003 ms: Timeout was reached",
+      "doi": "https://doi.org/10.58119/ULG/MIRUU5"
+    }
+  ]
+}

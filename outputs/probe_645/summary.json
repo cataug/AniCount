@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "model": "dmd",
+      "status": "failed",
+      "exit_code": 1,
+      "path": "/home/tahiti/AniCount/outputs/probe_645/dmd",
+      "frames": 0,
+      "count_median": null,
+      "device": "cpu",
+      "error": "std::bad_alloc"
+    },
+    {
+      "model": "owl-c",
+      "status": "complete",
+      "exit_code": 0,
+      "path": "/home/tahiti/AniCount/outputs/probe_645/owl-c",
+      "frames": 1,
+      "count_median": 155.0,
+      "device": "cpu",
+      "error": null
+    },
+    {
+      "model": "owl-d",
+      "status": "complete",
+      "exit_code": 0,
+      "path": "/home/tahiti/AniCount/outputs/probe_645/owl-d",
+      "frames": 1,
+      "count_median": 349.0,
+      "device": "cpu",
+      "error": null
+    }
+  ],
+  "config": {
+    "video": "/home/tahiti/AniCount/NG South Sudan 1920x1080 (1).m4v.mp4",
+    "device": "auto",
+    "min_free_gb": 8.0,
+    "threads": 4,
+    "start": 61.0,
+    "end": 68.0,
+    "at": 64.5,
+    "stride": 1,
+    "max_frames": 0,
+    "tile": 512,
+    "overlap": 160,
+    "dmd_size": 640,
+    "dmd_conf": 0.15,
+    "owl_conf": 0.2,
+    "owl_adapt": 0.3,
+    "owl_negative": 0.1,
+    "nms_iou": 0.45,
+    "preview_times": [
+      64.5
+    ],
+    "save_all_frames": false,
+    "no_video": false,
+    "root": "/home/tahiti/AniCount",
+    "out": "/home/tahiti/AniCount/outputs/probe_645",
+    "weights_dir": "/home/tahiti/AniCount/weights",
+    "source_size": 220058043,
+    "source_mtime_ns": 1793891872072187333,
+    "vendor_commit": "975cc76a9ae618088159efe1f1fe611124e13b3e",
+    "program_version": "1.0",
+    "program_sha256": "6003b554b8a146833fffb68910cdc847e5e02c9f652147f09d8d93e75c987c15",
+    "signature": "574cee4a53ebd47dc176f83afb350a682c50c0e90a8d63e6466a323b6b34bc28"
+  },
+  "interpretation": "Per-frame predicted counts, not accuracy or unique population size"
+}

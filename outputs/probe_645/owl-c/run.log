@@ -1,0 +1,12 @@
+[GPU] 0: NVIDIA A100-PCIE-40GB | free 2.26 GiB
+[DEVICE] owl-c: cpu | no visible GPU with 8 GiB free; CPU inference
+[VIDEO] /home/tahiti/AniCount/NG South Sudan 1920x1080 (1).m4v.mp4 | 23.976024 FPS | 172.381s | 1 selected frames
+[VERIFY] OWL-C.pth: checking md5
+[MODEL] Constructing owl-c; pretrained=False (backbone is in the local checkpoint)
+[MODEL] owl-c: strict checkpoint load OK | localization points
+[FRAME] owl-c 1/1 | frame=1546 | source=64.481s
+[TILES] owl-c: 5/15
+[TILES] owl-c: 10/15
+[TILES] owl-c: 15/15
+[RESULT] owl-c: count=155 | 35.32s/frame | 0.028 processing FPS | ETA 0.0 min
+[DONE] owl-c: 1 frames | count range 155..155 | /home/tahiti/AniCount/outputs/probe_645/owl-c

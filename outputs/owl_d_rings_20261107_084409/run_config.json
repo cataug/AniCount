@@ -1,0 +1,16 @@
+{
+  "tile": 512,
+  "overlap": 160,
+  "owl_conf": 0.2,
+  "owl_adapt": 0.3,
+  "owl_negative": 0.1,
+  "dmd_size": 640,
+  "dmd_conf": 0.15,
+  "nms_iou": 0.45,
+  "video": "/home/tahiti/AniCount/NG South Sudan 1920x1080 (1).m4v.mp4",
+  "start": 61.0,
+  "end": 64.0,
+  "stride": 3,
+  "source_size": 220058043,
+  "source_mtime_ns": 1793891872072187333
+}

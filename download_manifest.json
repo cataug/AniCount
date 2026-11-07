@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "url": "https://github.com/ConservationDronesAI/DroneMegaDetector/releases/download/v1.1/DroneMegaDetector_RFDETRMedium_2026.10.04.pth",
+      "path": "/home/tahiti/AniCount/weights/DroneMegaDetector_RFDETRMedium_2026.10.04.pth",
+      "size": 0,
+      "checksum": "",
+      "estimate": 1073741824
+    },
+    {
+      "url": "https://zenodo.org/records/20802844/files/OWL-C.pth?download=1",
+      "path": "/home/tahiti/AniCount/weights/OWL-C.pth",
+      "size": 0,
+      "checksum": "md5:4d1cb40b4ee16d531ded09c16333d73b",
+      "estimate": 262144000
+    },
+    {
+      "url": "https://zenodo.org/records/20802844/files/OWL-D.pth?download=1",
+      "path": "/home/tahiti/AniCount/weights/OWL-D.pth",
+      "size": 0,
+      "checksum": "md5:30ff57bba505de4be743c2e0ef0c23ed",
+      "estimate": 4294967296
+    },
+    {
+      "url": "https://zenodo.org/records/20802844/files/train.zip?download=1",
+      "path": "/home/tahiti/AniCount/DATA/OWL_Caribou/train.zip",
+      "size": 0,
+      "checksum": "md5:d55575fecc0e5e6d7180c96b74e75097",
+      "estimate": 12884901888
+    },
+    {
+      "url": "https://zenodo.org/records/20802844/files/test.zip?download=1",
+      "path": "/home/tahiti/AniCount/DATA/OWL_Caribou/test.zip",
+      "size": 0,
+      "checksum": "md5:086a0430c769b164cbcc9d2d48db6fac",
+      "estimate": 1468006400
+    },
+    {
+      "url": "https://edmond.mpg.de/api/access/datafile/194200?format=original",
+      "path": "/home/tahiti/AniCount/DATA/Koger_African_Drones/data-repo.zip",
+      "size": 67104641565,
+      "checksum": "md5:fce0fb79ff82e34d9d09cfbcb0eca0fc",
+      "estimate": 0
+    }
+  ],
+  "source_errors": [
+    {
+      "source": "Delplanque_African_Mammals",
+      "error": "Metadata HTTP request failed (28): curl: (28) Failed to connect to dataverse.uliege.be port 443 after 20002 ms: Timeout was reached\ncurl: (28) Failed to connect to dataverse.uliege.be port 443 after 20003 ms: Timeout was reached",
+      "doi": "https://doi.org/10.58119/ULG/MIRUU5"
+    }
+  ]
+}

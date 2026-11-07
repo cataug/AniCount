@@ -1,0 +1,56 @@
+{
+  "input_example": "bandicam 2026-11-06 22-05-04-925.mp4",
+  "input_dimensions": [
+    1464,
+    836
+  ],
+  "example_time_s": 2.0,
+  "device": "cpu",
+  "threads": 4,
+  "tile": 512,
+  "overlap": 160,
+  "real_weight_tests": {
+    "dmd_640": {
+      "count": 290,
+      "threshold": 0.15,
+      "seconds": 5.66
+    },
+    "dmd_1280": {
+      "count": 218,
+      "threshold": 0.15,
+      "seconds": 31.62
+    },
+    "owl_c": {
+      "count": 84,
+      "threshold": 0.2,
+      "seconds": 3.1
+    }
+  },
+  "owl_d_architecture": {
+    "parameters": 855471745,
+    "input": [
+      1,
+      3,
+      64,
+      64
+    ],
+    "heatmap": [
+      32,
+      32
+    ],
+    "finite": true,
+    "stitch_and_peak_extraction": "passed",
+    "weights": "random test parameters; released checkpoint not tested here"
+  },
+  "video_encoder": {
+    "codec": "h264",
+    "frames": 3,
+    "output_width": 1464,
+    "output_height": 884,
+    "output_fps": 10.0000735
+  },
+  "interpretation": "Counts are predictions on a user-provided unannotated example, not accuracy/recall measurements. Server HD source and CUDA unavailable here.",
+  "fresh_environment_setup": "passed: isolated CPU venv created, full locked dependencies installed, imports/versions checked",
+  "resume": "passed: completed DMD and OWL-C skipped with matching configuration",
+  "automatic_device_selection": "passed: simulated 2.26 GiB free -> CPU; 30 GiB free -> CUDA; hidden GPU respected"
+}

@@ -1,0 +1,114 @@
+[GPU] 0: NVIDIA A100-PCIE-40GB | free 2.26 GiB
+[DEVICE] dmd: cpu | no visible GPU with 8 GiB free; CPU inference
+[VIDEO] /home/tahiti/AniCount/NG South Sudan 1920x1080 (1).m4v.mp4 | 23.976024 FPS | 172.381s | 1 selected frames
+[VERIFY] DroneMegaDetector_RFDETRMedium_2026.10.04.pth: checking sha256
+/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/detr.py:740: FutureWarning: The `RFDETRBase` was deprecated since v1.7.0. It will be removed in v2.0.0.
+  getattr(variant_obj, "__name__", symbol): variant_obj
+/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/detr.py:740: FutureWarning: The `RFDETRLargeDeprecated` was deprecated since v1.7.0. It will be removed in v2.0.0.
+  getattr(variant_obj, "__name__", symbol): variant_obj
+/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/detr.py:740: FutureWarning: The `RFDETRSegPreview` was deprecated since v1.7.0. It will be removed in v2.0.0.
+  getattr(variant_obj, "__name__", symbol): variant_obj
+[2026-11-06 22:45:19] [WARNING] rf-detr - Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-11-06 22:45:19] [WARNING] rf-detr - Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+[2026-11-06 22:45:20] [WARNING] rf-detr - load_pretrain_weights: args.num_queries absent; inferred ckpt_num_queries=300 from tensor rows 3900 ÷ ckpt_group_detr=13.
+[MODEL] DMD | true boxes | animal class=1 | inference size=640
+[FRAME] dmd 1/1 | frame=1546 | source=64.481s
+[2026-11-06 22:45:20] [WARNING] rf-detr - Model is not optimized for inference. Latency may be higher than expected. For full GPU throughput (e.g. ~8x on T4 via FP16 Tensor Cores), call model.inference(dtype=torch.float16).
+Traceback (most recent call last):
+  File "/home/tahiti/AniCount/anicount_video.py", line 565, in run_worker
+    detections, heatmap, seconds, tile_count = detector.predict(frame)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/anicount_video.py", line 354, in predict
+    prediction = self.model.predict(Image.fromarray(rgb), threshold=config["dmd_conf"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/detr.py", line 326, in wrapper
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/detr.py", line 2911, in predict
+    predictions = model(batch_tensor)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/lwdetr.py", line 477, in forward
+    features, poss, cross_attn_features = self.backbone(samples)
+                                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/__init__.py", line 26, in forward
+    result = self[0](tensor_list)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/backbone.py", line 175, in forward
+    raw_feats = self.encoder(tensor_list.tensors)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/dinov2.py", line 276, in forward
+    x = self.encoder(x)
+        ^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/dinov2_with_windowed_attn.py", line 1314, in forward
+    outputs = self.encoder(
+              ^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/dinov2_with_windowed_attn.py", line 855, in forward
+    layer_outputs = layer_module(hidden_states, output_attentions, run_full_attention)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/dinov2_with_windowed_attn.py", line 804, in forward
+    layer_output = self.mlp(layer_output)
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/rfdetr/models/backbone/dinov2_with_windowed_attn.py", line 713, in forward
+    hidden_state = self.activation(hidden_state)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tahiti/AniCount/.venv_anicount/lib/python3.12/site-packages/transformers/activations.py", line 89, in forward
+    return self.act(input)
+           ^^^^^^^^^^^^^^^
+RuntimeError: std::bad_alloc
